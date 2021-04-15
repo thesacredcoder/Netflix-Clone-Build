@@ -29,17 +29,50 @@
 .login__body > h1 {
   font-size: 3.125rem;
   margin-bottom: 20px;
+  animation: fall-down ease-in-out 2s;
+}
+
+@keyframes fall-down {
+  0% {
+    transform: translateY(-70%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
 }
 
 .login__body > h2 {
   font-size: 2rem;
   font-weight: 400;
   margin-bottom: 30px;
+  animation: slide-in ease-out 2s;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-60%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 .login__body > h3 {
   font-size: 1.3rem;
   font-weight: 400;
+  animation: view ease 6s;
+}
+
+@keyframes view {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .login__button {
@@ -74,8 +107,7 @@
   width: 30%;
   border: none;
   max-width: 600px;
-  /* position: absolute; */
-  /* left: 30%; */
+  animation: view ease 6s;
 }
 
 .login__getStarted {
@@ -89,8 +121,7 @@
   font-weight: 400;
   cursor: pointer;
   text-transform: uppercase;
-  /* position: absolute;
-  top: 22.2%; */
+  animation: view ease 6s;
 }
 
 .login__input {

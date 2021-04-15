@@ -3,6 +3,8 @@ import "./Banner.css";
 
 import axios from "../middleware/axios";
 import requests from "../middleware/requests";
+import PlayArrowIcon from "@material-ui/icons/PlayArrow";
+import PlaylistAddIcon from "@material-ui/icons/PlaylistAdd";
 
 function Banner(props) {
   const [movie, setMovie] = useState([]);
@@ -41,8 +43,14 @@ function Banner(props) {
           {movie?.title || movie?.title || movie?.original_name}
         </h1>
         <div className="banner__buttons">
-          <button className="banner__button">Play</button>
-          <button className="banner__button">My List</button>
+          <button className="banner__button">
+            <PlayArrowIcon className="iconOne" />
+            Play
+          </button>
+          <button className="banner__button">
+            <PlaylistAddIcon className="iconOne" />
+            My List
+          </button>
         </div>
         <h1 className="banner__desc">{truncate(movie?.overview, 150)}</h1>
       </div>

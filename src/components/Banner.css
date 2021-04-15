@@ -12,9 +12,34 @@
 }
 
 .banner__title {
+  overflow: hidden;
+  white-space: nowrap;
   font-size: 3rem;
   font-weight: 800;
   padding-bottom: 0.3rem;
+  /* margin: 0 auto; */
+  border-right: 0.15rem solid white;
+  animation: typing 3.5s steps(20, start), blink-caret 0.75s step-start infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: white;
+  }
 }
 
 .banner__desc {
@@ -49,6 +74,13 @@
   padding-top: 0.5rem;
   background-color: rgba(51, 51, 51, 0.5);
   padding-bottom: 0.5rem;
+  position: relative;
+}
+
+.iconOne {
+  position: absolute;
+  top: 10%;
+  left: 8px;
 }
 
 .banner__button:hover {
